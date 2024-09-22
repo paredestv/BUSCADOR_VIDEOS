@@ -7,11 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Buscar Videos Locales</h1>
-    <input type="file" id="fileInput" accept="video/mp4,video/quicktime,video/x-msvideo,video/H264" />
-    <p id="fileInfo">No se ha seleccionado ningún video.</p>
-    <video id="videoPreview" controls width="400" style="display: none;"></video>
+    <div class="container">
+        <h1>Buscar Videos Locales</h1>
+        <label for="fileInput" class="custom-file-upload">
+            Seleccionar Video
+        </label>
+        <input type="file" id="fileInput" accept="video/mp4,video/quicktime,video/x-msvideo,video/H264" />
+        <p id="fileInfo">No se ha seleccionado ningún video.</p>
+        
+        <video id="videoPreview" controls width="400" style="display: none;"></video>
+
+        <div id="controls" style="display: none;">
+            <p id="videoDetails"></p>
+            <div class="buttons">
+                <button id="playPause" class="btn">Pausar</button>
+                <button id="skipBack" class="btn">← Retroceder 10s</button>
+                <button id="skipForward" class="btn">Avanzar 10s →</button>
+            </div>
+            <div class="speed-control">
+                <label for="playbackRate">Velocidad de reproducción:</label>
+                <select id="playbackRate" class="dropdown">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+                <button id="captureThumbnail" class="btn">Capturar Miniatura</button>
+            </div>
+        </div>
+
+        <canvas id="thumbnailCanvas" style="display:none;"></canvas>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
