@@ -1,19 +1,107 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
 }
 
 h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
     color: #333;
+}
+
+/* Custom file input */
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
 }
 
 #fileInfo {
     margin-top: 10px;
     font-size: 14px;
-    color: #555;
+    color: #666;
 }
 
+/* Video and Controls */
 video {
     margin-top: 20px;
+    border-radius: 8px;
     border: 1px solid #ddd;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+.buttons {
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Speed Control */
+.speed-control {
+    margin-top: 15px;
+}
+
+label {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.dropdown {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#thumbnailCanvas {
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 400px;
+    display: none;
 }
